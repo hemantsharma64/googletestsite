@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>GTM Click Tracking Test | InboxDoctor</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({
+          "gtm.start": new Date().getTime(),
+          event: "gtm.js",
+        });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-PF6ZQGJH");
+    </script>
+    <!-- End Google Tag Manager -->
+
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          sans-serif;
+        background: #0f172a;
+        color: #e5e7eb;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .page {
+        max-width: 960px;
+        width: 100%;
+        padding: 32px 20px;
+      }
+
+      .card {
+        background: #020617;
+        border-radius: 16px;
+        padding: 32px 28px;
+        border: 1px solid rgba(148, 163, 184, 0.3);
+        box-shadow: 0 18px 45px rgba(15, 23, 42, 0.8);
+      }
+
+      .badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 4px 10px;
+        border-radius: 999px;
+        background: rgba(56, 189, 248, 0.08);
+        border: 1px solid rgba(56, 189, 248, 0.3);
+        font-size: 12px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: #7dd3fc;
+        margin-bottom: 16px;
+      }
+
+      h1 {
+        font-size: 32px;
+        line-height: 1.1;
+        margin: 0 0 8px;
+      }
+
+      .subtitle {
+        margin: 0 0 24px;
+        color: #9ca3af;
+        max-width: 540px;
+      }
+
+      .cta-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-bottom: 24px;
+      }
+
+      button,
+      .link-btn {
+        border: none;
+        cursor: pointer;
+        font-size: 14px;
+        font-weight: 500;
+        border-radius: 999px;
+        padding: 10px 18px;
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        text-decoration: none;
+      }
+
+      .primary {
+        background: #38bdf8;
+        color: #0f172a;
+      }
+
+      .primary:hover {
+        opacity: 0.9;
+      }
+
+      .secondary {
+        background: rgba(15, 23, 42, 0.7);
+        color: #e5e7eb;
+        border: 1px solid rgba(148, 163, 184, 0.5);
+      }
+
+      .secondary:hover {
+        border-color: #e5e7eb;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+        gap: 24px;
+        margin-top: 24px;
+      }
+
+      .panel {
+        border-radius: 12px;
+        background: rgba(15, 23, 42, 0.85);
+        border: 1px solid rgba(31, 41, 55, 0.9);
+        padding: 18px 16px;
+      }
+
+      .panel h2 {
+        margin: 0 0 10px;
+        font-size: 14px;
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        color: #9ca3af;
+      }
+
+      .panel p,
+      .panel li,
+      .panel code {
+        font-size: 13px;
+        color: #9ca3af;
+      }
+
+      code {
+        font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+          "Liberation Mono", "Courier New", monospace;
+        background: rgba(15, 23, 42, 0.9);
+        padding: 2px 4px;
+        border-radius: 4px;
+      }
+
+      .pill-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin: 8px 0 0;
+      }
+
+      .pill {
+        border-radius: 999px;
+        padding: 4px 10px;
+        font-size: 12px;
+        background: rgba(15, 23, 42, 0.8);
+        border: 1px dashed rgba(148, 163, 184, 0.6);
+      }
+
+      .footer {
+        margin-top: 24px;
+        font-size: 11px;
+        color: #6b7280;
+      }
+
+      @media (max-width: 720px) {
+        .card {
+          padding: 24px 20px;
+        }
+
+        h1 {
+          font-size: 24px;
+        }
+
+        .grid {
+          grid-template-columns: minmax(0, 1fr);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-PF6ZQGJH"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <div class="page">
+      <main class="card">
+        <div class="badge">
+          <span>GTM Test Lab</span>
+        </div>
+
+        <h1>Click Tracking Playground</h1>
+        <p class="subtitle">
+          Use this page to verify that your
+          <strong>Google Tag Manager</strong> + <strong>Google Analytics</strong>
+          setup is receiving click events correctly.
+        </p>
+
+        <div class="cta-row">
+          <button
+            id="primary-cta"
+            class="primary"
+            data-track-click="true"
+            data-click-name="primary_cta"
+            data-click-location="hero"
+          >
+            Test Primary CTA
+          </button>
+
+          <button
+            id="secondary-cta"
+            class="secondary"
+            data-track-click="true"
+            data-click-name="secondary_cta"
+            data-click-location="hero"
+          >
+            Test Secondary CTA
+          </button>
+
+          <a
+            href="https://inboxdoctor.ai"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="secondary link-btn"
+            id="external-link"
+            data-track-click="true"
+            data-click-name="external_link"
+            data-click-location="hero"
+          >
+            Visit InboxDoctor (External Link)
+          </a>
+        </div>
+
+        <div class="grid">
+          <section class="panel">
+            <h2>How to use this page</h2>
+            <ol>
+              <li>Open <strong>Preview</strong> mode in Google Tag Manager.</li>
+              <li>Reload this page with the GTM debugger attached.</li>
+              <li>
+                Click any of the buttons / link above and watch for the event:
+                <code>test_click</code> in the GTM preview.
+              </li>
+              <li>
+                In GTM, create a GA4 event tag that fires on
+                <code>Event name = test_click</code> and send it to your GA
+                property.
+              </li>
+            </ol>
+            <p style="margin-top: 8px">
+              Every tracked element pushes the following into
+              <code>dataLayer</code>:
+            </p>
+            <pre
+              style="
+                margin: 8px 0 0;
+                padding: 10px;
+                background: #020617;
+                border-radius: 8px;
+                border: 1px solid rgba(31, 41, 55, 0.9);
+                overflow-x: auto;
+                font-size: 12px;
+              "
+            >{
+  event: "test_click",
+  click_name: "primary_cta",
+  click_location: "hero",
+  click_text: "Test Primary CTA",
+  click_id: "primary-cta"
+}</pre>
+          </section>
+
+          <section class="panel">
+            <h2>Event reference</h2>
+            <p>
+              All clickable test elements use the same event name so you can
+              easily create a single trigger in GTM:
+            </p>
+            <ul>
+              <li><code>event</code> = <code>test_click</code></li>
+              <li><code>click_name</code> = logical name (e.g. hero button)</li>
+              <li><code>click_location</code> = section where click occurred</li>
+              <li><code>click_text</code> = rendered text of the element</li>
+              <li><code>click_id</code> = HTML element ID</li>
+            </ul>
+
+            <div class="pill-list">
+              <div class="pill">Event: test_click</div>
+              <div class="pill">Primary CTA</div>
+              <div class="pill">Secondary CTA</div>
+              <div class="pill">External link</div>
+            </div>
+          </section>
+        </div>
+
+        <div class="footer">
+          Tip: Once events show up in GTM preview, check GA Realtime &gt;
+          Events to confirm they arrive in your property.
+        </div>
+      </main>
+    </div>
+
+    <script>
+      // Helper: push structured click events into dataLayer
+      function trackTestClick(payload) {
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push(
+          Object.assign(
+            {
+              event: "test_click",
+            },
+            payload
+          )
+        );
+
+        // Optional: also log to console for quick debugging
+        console.log("GTM test_click event pushed:", payload);
+      }
+
+      // Attach listeners to all elements with data-track-click="true"
+      (function attachClickListeners() {
+        var clickable = document.querySelectorAll("[data-track-click='true']");
+        clickable.forEach(function (el) {
+          el.addEventListener("click", function () {
+            var payload = {
+              click_name: el.getAttribute("data-click-name") || null,
+              click_location: el.getAttribute("data-click-location") || null,
+              click_text: (el.innerText || el.textContent || "").trim(),
+              click_id: el.id || null,
+            };
+            trackTestClick(payload);
+          });
+        });
+      })();
+    </script>
+  </body>
+</html>
