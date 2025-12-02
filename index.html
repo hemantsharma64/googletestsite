@@ -2,22 +2,22 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <title>Understanding Click Tracking with Google Analytics & Google Tag Manager</title>
+  <title>The Power of Consistent Learning in a Fast-Changing World</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta
     name="description"
-    content="Educational guide about how click tracking works with Google Tag Manager and Google Analytics, explained in simple language."
+    content="An educational blog-style article about why continuous learning matters and how anyone can build a simple learning habit."
   />
 
   <!-- Google Tag Manager -->
   <script>
     (function(w,d,s,l,i){w[l]=w[l]||[];
       w[l].push({'gtm.start': new Date().getTime(), event:'gtm.js'});
-      var f=d.getElementsByTagName(s)[0],
-          j=d.createElement(s),
-          dl=l!='dataLayer'?'&l='+l:'';
-      j.async=true;
-      j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+      var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l!='dataLayer'?'&l='+l:'';
+      j.async = true;
+      j.src = 'https://www.googletagmanager.com/gtm.js?id='+i+dl;
       f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-5SM4668S');
   </script>
@@ -25,13 +25,13 @@
 
   <style>
     :root {
-      --bg: #0b1120;
-      --bg-elevated: #020617;
-      --text-main: #e5e7eb;
-      --text-muted: #9ca3af;
-      --accent: #38bdf8;
-      --accent-soft: rgba(56, 189, 248, 0.12);
-      --border-subtle: rgba(148, 163, 184, 0.35);
+      --bg: #f5f5f7;
+      --text-main: #111827;
+      --text-muted: #6b7280;
+      --accent: #2563eb;
+      --accent-soft: #eff6ff;
+      --border: #e5e7eb;
+      --card-bg: #ffffff;
     }
 
     * {
@@ -42,275 +42,156 @@
       margin: 0;
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
         sans-serif;
-      background: radial-gradient(circle at top, #1d283a 0, #020617 45%, #020617 100%);
+      background: var(--bg);
       color: var(--text-main);
-      min-height: 100vh;
     }
 
     .page {
-      max-width: 960px;
+      max-width: 860px;
       margin: 0 auto;
-      padding: 32px 16px 48px;
+      padding: 32px 16px 40px;
     }
 
-    header.site-header {
-      padding: 8px 4px 24px;
+    .site-header {
+      padding: 12px 0 24px;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 24px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 16px;
+      gap: 12px;
     }
 
-    .logo {
+    .brand {
       display: flex;
       align-items: center;
       gap: 10px;
     }
 
-    .logo-mark {
+    .brand-logo {
       width: 32px;
       height: 32px;
       border-radius: 10px;
-      background: radial-gradient(circle at 30% 20%, #e0f2fe 0, #38bdf8 32%, #0ea5e9 60%, #0369a1 100%);
-      box-shadow: 0 0 0 1px rgba(56, 189, 248, 0.5),
-                  0 12px 30px rgba(15, 23, 42, 0.9);
+      background: radial-gradient(circle at 30% 20%, #bfdbfe 0, #2563eb 40%, #1d4ed8 80%);
     }
 
-    .logo-text {
-      font-size: 14px;
+    .brand-text {
       font-weight: 600;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
+      font-size: 15px;
+    }
+
+    .tagline {
+      font-size: 12px;
       color: var(--text-muted);
     }
 
-    nav {
-      font-size: 13px;
-      color: var(--text-muted);
+    .article-card {
+      background: var(--card-bg);
+      border-radius: 18px;
+      border: 1px solid var(--border);
+      box-shadow: 0 18px 40px rgba(15, 23, 42, 0.04);
+      padding: 24px 20px 28px;
     }
 
-    nav span {
-      opacity: 0.7;
-    }
-
-    main.article-shell {
-      background: linear-gradient(
-          135deg,
-          rgba(15, 23, 42, 0.96),
-          rgba(15, 23, 42, 0.98)
-        ),
-        radial-gradient(circle at top left, rgba(56, 189, 248, 0.2), transparent 60%);
-      border-radius: 22px;
-      border: 1px solid var(--border-subtle);
-      box-shadow: 0 22px 60px rgba(15, 23, 42, 0.9);
-      padding: 28px 24px 32px;
-    }
-
-    .badge {
+    .pill {
       display: inline-flex;
       align-items: center;
       gap: 8px;
       padding: 4px 10px;
       border-radius: 999px;
       background: var(--accent-soft);
-      border: 1px solid rgba(56, 189, 248, 0.6);
+      color: #1d4ed8;
       font-size: 11px;
       text-transform: uppercase;
       letter-spacing: 0.12em;
-      color: #7dd3fc;
       margin-bottom: 12px;
     }
 
-    .badge-dot {
+    .pill-dot {
       width: 6px;
       height: 6px;
       border-radius: 999px;
       background: #22c55e;
-      box-shadow: 0 0 0 4px rgba(34, 197, 94, 0.2);
     }
 
     h1.article-title {
-      font-size: 30px;
-      margin: 0 0 10px;
+      font-size: 28px;
+      margin: 0 0 8px;
     }
 
-    .article-meta {
+    .meta {
       font-size: 13px;
       color: var(--text-muted);
+      margin-bottom: 18px;
+    }
+
+    .hero-paragraph {
+      font-size: 15px;
+      color: var(--text-main);
       margin-bottom: 20px;
     }
 
-    .hero-intro {
-      font-size: 15px;
-      color: var(--text-main);
-      margin-bottom: 22px;
+    .hero-paragraph strong {
+      font-weight: 600;
     }
 
-    .hero-intro strong {
-      color: #f9fafb;
-    }
-
-    .cta-box {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-bottom: 28px;
-    }
-
-    .primary-btn {
-      border-radius: 999px;
-      border: none;
-      cursor: pointer;
-      padding: 10px 18px;
-      font-size: 14px;
-      font-weight: 500;
-      background: var(--accent);
-      color: #0b1120;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      text-decoration: none;
-      box-shadow: 0 10px 25px rgba(56, 189, 248, 0.45);
-    }
-
-    .primary-btn:hover {
-      opacity: 0.95;
-      transform: translateY(-1px);
-    }
-
-    .secondary-chip {
-      border-radius: 999px;
-      border: 1px dashed rgba(148, 163, 184, 0.7);
-      padding: 8px 12px;
-      font-size: 12px;
+    .highlight-box {
+      margin-bottom: 24px;
+      padding: 12px 14px;
+      border-radius: 12px;
+      background: #f9fafb;
+      border: 1px dashed var(--border);
+      font-size: 13px;
       color: var(--text-muted);
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      background: rgba(15, 23, 42, 0.85);
-    }
-
-    .secondary-chip code {
-      font-size: 11px;
-    }
-
-    .layout {
-      display: grid;
-      grid-template-columns: minmax(0, 1.8fr) minmax(0, 1fr);
-      gap: 24px;
     }
 
     article {
       font-size: 15px;
       line-height: 1.7;
-      color: var(--text-main);
     }
 
     article h2 {
-      font-size: 18px;
       margin-top: 22px;
-      margin-bottom: 8px;
+      margin-bottom: 10px;
+      font-size: 20px;
     }
 
     article p {
       margin: 8px 0;
-      color: var(--text-main);
     }
 
     article ul {
-      padding-left: 20px;
       margin: 8px 0 12px;
-      color: var(--text-muted);
+      padding-left: 20px;
     }
 
     article li {
       margin-bottom: 4px;
     }
 
-    article code {
-      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
-        "Liberation Mono", "Courier New", monospace;
-      font-size: 12px;
-      background: rgba(15, 23, 42, 0.9);
-      padding: 2px 5px;
-      border-radius: 4px;
-      border: 1px solid rgba(31, 41, 55, 0.9);
+    .quote {
+      border-left: 3px solid var(--accent);
+      padding-left: 14px;
+      margin: 16px 0;
+      font-style: italic;
+      color: var(--text-muted);
     }
 
-    .side-panel {
-      border-radius: 16px;
-      border: 1px solid rgba(31, 41, 55, 0.9);
-      background: radial-gradient(circle at top, rgba(15, 23, 42, 0.9), #020617);
-      padding: 16px 14px;
+    .footer-note {
+      margin-top: 24px;
+      padding-top: 16px;
+      border-top: 1px solid var(--border);
       font-size: 13px;
       color: var(--text-muted);
     }
 
-    .side-panel h3 {
-      margin: 0 0 8px;
-      font-size: 13px;
-      text-transform: uppercase;
-      letter-spacing: 0.14em;
-      color: var(--text-muted);
-    }
-
-    .toc {
-      list-style: none;
-      padding-left: 0;
-      margin: 6px 0 12px;
-    }
-
-    .toc li {
-      margin-bottom: 4px;
-    }
-
-    .toc a {
-      font-size: 13px;
-      color: var(--accent);
-      text-decoration: none;
-    }
-
-    .toc a:hover {
-      text-decoration: underline;
-    }
-
-    .pill-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-      margin-top: 8px;
-    }
-
-    .pill {
-      border-radius: 999px;
-      padding: 4px 8px;
-      border: 1px dashed rgba(148, 163, 184, 0.6);
-      font-size: 11px;
-      color: var(--text-muted);
-    }
-
-    footer {
-      margin-top: 20px;
-      font-size: 11px;
-      color: var(--text-muted);
-      display: flex;
-      justify-content: space-between;
-      gap: 12px;
-      flex-wrap: wrap;
-      padding: 0 2px;
-    }
-
-    @media (max-width: 768px) {
-      main.article-shell {
-        padding: 22px 18px 26px;
+    @media (max-width: 640px) {
+      .article-card {
+        padding: 18px 16px 22px;
       }
 
       h1.article-title {
         font-size: 24px;
-      }
-
-      .layout {
-        grid-template-columns: minmax(0, 1fr);
       }
     }
   </style>
@@ -319,199 +200,134 @@
   <!-- Google Tag Manager (noscript) -->
   <noscript>
     <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5SM4668S"
-            height="0" width="0"
+            height="0"
+            width="0"
             style="display:none;visibility:hidden"></iframe>
   </noscript>
   <!-- End Google Tag Manager (noscript) -->
 
   <div class="page">
     <header class="site-header">
-      <div class="logo">
-        <div class="logo-mark"></div>
-        <div class="logo-text">InboxDoctor · Learning Hub</div>
-      </div>
-      <nav>
-        <span>Education · Analytics · Email</span>
-      </nav>
-    </header>
-
-    <main class="article-shell">
-      <div class="badge">
-        <span class="badge-dot"></span>
-        <span>Educational Article</span>
-      </div>
-
-      <h1 class="article-title">
-        Understanding Click Tracking with Google Analytics & Google Tag Manager
-      </h1>
-
-      <div class="article-meta">
-        <span>Reading time: ~5 minutes</span> ·
-        <span>Published on <time datetime="2025-12-02">December 2, 2025</time></span>
-      </div>
-
-      <p class="hero-intro">
-        In this short guide, you’ll learn what
-        <strong>click tracking</strong> is, why it is important for measuring
-        engagement, and how tools like <strong>Google Tag Manager (GTM)</strong>
-        and <strong>Google Analytics</strong> help you record every important action.
-      </p>
-
-      <div class="cta-box">
-        <!-- Main tracked CTA (click shows in GA via GTM) -->
-        <a
-          href="https://inboxdoctor.ai"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="primary-btn"
-          id="visit-inboxdoctor"
-          data-track-click="true"
-          data-click-name="visit_inboxdoctor"
-          data-click-location="hero_cta"
-        >
-          Visit InboxDoctor Site →
-        </a>
-
-        <div class="secondary-chip">
-          This button is tracked as a custom event:
-          <code>blog_click</code>
+      <div class="brand">
+        <div class="brand-logo"></div>
+        <div>
+          <div class="brand-text">Everyday Learning Journal</div>
+          <div class="tagline">Simple ideas to keep your mind growing</div>
         </div>
       </div>
+    </header>
 
-      <div class="layout">
-        <article>
-          <h2 id="what-is-click-tracking">1. What is click tracking?</h2>
-          <p>
-            A normal pageview only tells you that someone opened a page. With
-            <strong>click tracking</strong>, you also learn what they actually did:
-            which buttons they pressed, which links they followed, and which
-            call-to-action caught their attention.
-          </p>
-          <p>
-            On this page, when you click the blue button above, the click is
-            recorded as a structured <code>blog_click</code> event in
-            <code>dataLayer</code>. GTM reads that event and can forward it to
-            your Google Analytics property as a custom event.
-          </p>
-
-          <h2 id="why-it-matters">2. Why does click tracking matter?</h2>
-          <p>Click data helps you answer questions such as:</p>
-          <ul>
-            <li>Which call-to-action do users prefer in my email or landing page?</li>
-            <li>Do visitors scroll and interact, or do they bounce immediately?</li>
-            <li>Which links drive people to sign-up pages or pricing pages?</li>
-          </ul>
-          <p>
-            For email campaigns, you might send subscribers to a page like this.
-            Every time they click the main button, you see that interaction inside
-            Google Analytics and can measure the real performance of your campaign.
-          </p>
-
-          <h2 id="how-it-works">3. How does this demo page work?</h2>
-          <p>At a high level, three simple steps happen:</p>
-          <ul>
-            <li>Google Tag Manager is loaded on the page using the container ID.</li>
-            <li>
-              When you click a tracked element, a custom event is pushed into
-              <code>dataLayer</code>.
-            </li>
-            <li>
-              A GTM trigger listens for that event and fires a Google Analytics
-              tag to record the event.
-            </li>
-          </ul>
-          <p>
-            The event we push from this page looks roughly like this:
-          </p>
-          <p>
-            <code>
-              { event: "blog_click", click_name: "visit_inboxdoctor",
-              click_location: "hero_cta", click_text: "Visit InboxDoctor Site →" }
-            </code>
-          </p>
-
-          <h2 id="how-to-see-it">4. How do I see these clicks in Google Analytics?</h2>
-          <p>Inside Google Tag Manager you would typically:</p>
-          <ul>
-            <li>Create a <strong>Custom Event trigger</strong> for <code>blog_click</code>.</li>
-            <li>Create a <strong>GA4 Event tag</strong> that uses this trigger.</li>
-            <li>
-              Publish the container, then open <strong>Realtime</strong> in Google
-              Analytics to watch events appear as you click.
-            </li>
-          </ul>
-          <p>
-            Once this is configured, every email you send that links to this page
-            can generate valuable click data whenever the visitor interacts with
-            the content or main button.
-          </p>
-
-          <h2 id="summary">5. Summary</h2>
-          <p>
-            This simple educational page exists for one purpose: to help you
-            understand and test <strong>click tracking</strong>. If you arrived
-            here by clicking a link in an email, your pageview is already visible
-            in Analytics. When you press the blue button, your click will appear
-            there too.
-          </p>
-          <p>
-            Feel free to refresh, click again, and explore your analytics reports
-            to see how each interaction is captured.
-          </p>
-        </article>
-
-        <aside class="side-panel">
-          <h3>On this page</h3>
-          <ul class="toc">
-            <li><a href="#what-is-click-tracking">1. What is click tracking?</a></li>
-            <li><a href="#why-it-matters">2. Why it matters</a></li>
-            <li><a href="#how-it-works">3. How this demo works</a></li>
-            <li><a href="#how-to-see-it">4. See it in Analytics</a></li>
-            <li><a href="#summary">5. Summary</a></li>
-          </ul>
-
-          <p>
-            Tip: Open Google Tag Manager in <strong>Preview</strong> mode, then
-            click around this page to see the events in real time.
-          </p>
-
-          <div class="pill-list">
-            <div class="pill">Event: blog_click</div>
-            <div class="pill">Source: Email campaign</div>
-            <div class="pill">Tool: GTM & GA4</div>
-            <div class="pill">Use: Education & testing</div>
-          </div>
-        </aside>
+    <main class="article-card">
+      <div class="pill">
+        <span class="pill-dot"></span>
+        <span>Education · Personal Growth</span>
       </div>
 
-      <footer>
-        <span>&copy; 2025 InboxDoctor · Educational demo page</span>
-        <span>Built to test: email → click → analytics</span>
-      </footer>
+      <h1 class="article-title">The Power of Consistent Learning in a Fast-Changing World</h1>
+
+      <div class="meta">
+        <span>Published on <time datetime="2025-12-02">December 2, 2025</time></span>
+        · <span>Estimated reading time: 5 minutes</span>
+      </div>
+
+      <p class="hero-paragraph">
+        It has never been easier to learn something new. At the same time, it has
+        never been easier to feel like you are falling behind. The difference
+        between the two often comes down to one habit:
+        <strong>learning a little bit, every day</strong>.
+      </p>
+
+      <div class="highlight-box">
+        You don’t need perfect conditions to learn. You only need a small,
+        repeatable routine that fits into your real life — even 15 minutes a day
+        is enough to make progress when you stay consistent.
+      </div>
+
+      <article>
+        <h2>1. Why learning can’t stop after school</h2>
+        <p>
+          Many people think of education as something that happens only in school
+          or university. Once you get a degree, the “learning phase” is over and
+          the “working phase” begins. In reality, the world doesn’t work like
+          that anymore.
+        </p>
+        <p>
+          Technology, tools, and expectations change quickly. New skills appear,
+          old skills become less useful, and entire industries can shift in just
+          a few years. People who treat learning as a
+          <strong>lifelong habit</strong> are better prepared to adapt.
+        </p>
+
+        <h2>2. Small habits beat big plans</h2>
+        <p>
+          When we think about learning, we imagine huge plans: finishing a course,
+          reading a big textbook, or mastering a complex skill. Those goals are
+          great, but they can also be intimidating. It’s very easy to postpone
+          them to “someday”.
+        </p>
+        <p>
+          Instead of building a perfect plan, try building a tiny habit:
+        </p>
+        <ul>
+          <li>Read 3–5 pages of a book every day.</li>
+          <li>Watch one short educational video and take a note.</li>
+          <li>Practice a small exercise related to your field.</li>
+        </ul>
+        <p>
+          These actions may look small in a single day, but they add up quickly
+          over weeks and months.
+        </p>
+
+        <div class="quote">
+          “You rarely notice tiny improvements in the moment, but you definitely
+          notice the difference after a year of staying consistent.”
+        </div>
+
+        <h2>3. Make learning fit your real life</h2>
+        <p>
+          A learning routine only works if it fits into your real schedule. Some
+          people are fresh in the morning, others focus better at night. The
+          “best” time to learn is the time you can
+          <strong>actually stick to</strong>.
+        </p>
+        <p>Here are a few practical ideas:</p>
+        <ul>
+          <li>Use commute time to listen to educational podcasts.</li>
+          <li>Keep a book or reading app on your phone for small breaks.</li>
+          <li>Set a 15–20 minute timer in the evening for focused learning.</li>
+        </ul>
+
+        <h2>4. Learn in public when you can</h2>
+        <p>
+          One powerful way to stay motivated is to “learn in public”. This simply
+          means sharing what you are learning with others: writing short notes,
+          posting summaries, or discussing ideas with friends and colleagues.
+        </p>
+        <p>
+          When you explain something, you understand it more deeply. You also
+          turn learning into a social activity instead of a lonely chore, which
+          makes it easier to continue.
+        </p>
+
+        <h2>5. Progress, not perfection</h2>
+        <p>
+          Some days will be busy. You might miss your learning routine, feel
+          tired, or be distracted. That’s normal. The goal is not to be perfect;
+          the goal is to come back to your habit as soon as you can.
+        </p>
+        <p>
+          If you think of yourself as a “person who learns a little every day”,
+          you will naturally look for opportunities to grow. Over time, that
+          identity matters more than any single course or certificate.
+        </p>
+      </article>
+
+      <div class="footer-note">
+        Remember: you don’t need to wait for the perfect moment to improve your
+        skills. Start small, stay curious, and let your learning compound over
+        time.
+      </div>
     </main>
   </div>
-
-  <script>
-    // Push a structured event into dataLayer when a tracked element is clicked.
-    (function () {
-      function trackBlogClick(el) {
-        window.dataLayer = window.dataLayer || [];
-        window.dataLayer.push({
-          event: "blog_click",
-          click_name: el.getAttribute("data-click-name") || null,
-          click_location: el.getAttribute("data-click-location") || null,
-          click_text: (el.innerText || el.textContent || "").trim(),
-          click_id: el.id || null,
-        });
-        console.log("Blog click tracked:", el.id || el);
-      }
-
-      document.querySelectorAll("[data-track-click='true']").forEach(function (el) {
-        el.addEventListener("click", function () {
-          trackBlogClick(el);
-        });
-      });
-    })();
-  </script>
 </body>
 </html>
